@@ -1,0 +1,9 @@
+#Tue Oct 04 16:42:18 JST 2011
+activeProfiles=astah-professional-windows
+eclipse.preferences.version=1
+fullBuildGoals=resources\:testResources 
+includeModules=false
+resolveWorkspaceProjects=true
+resourceFilterGoals=process-resources
+skipCompilerPlugin=true
+version=1

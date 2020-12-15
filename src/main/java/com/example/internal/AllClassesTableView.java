@@ -16,6 +16,14 @@ import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 
+import com.change_vision.jude.api.inf.exception.ProjectNotFoundException;
+import com.change_vision.jude.api.inf.model.IClass;
+import com.change_vision.jude.api.inf.model.IModel;
+import com.change_vision.jude.api.inf.model.INamedElement;
+import com.change_vision.jude.api.inf.model.IPackage;
+import com.change_vision.jude.api.inf.project.ProjectAccessor;
+import com.change_vision.jude.api.inf.project.ProjectAccessorFactory;
+
 public class AllClassesTableView extends JTable {
 	
 	protected ProjectNameTableModel tableModel;

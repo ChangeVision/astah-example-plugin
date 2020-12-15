@@ -15,6 +15,13 @@ import java.awt.Container;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import com.change_vision.jude.api.inf.project.ProjectAccessor;
+import com.change_vision.jude.api.inf.project.ProjectAccessorFactory;
+import com.change_vision.jude.api.inf.project.ProjectEvent;
+import com.change_vision.jude.api.inf.project.ProjectEventListener;
+import com.change_vision.jude.api.inf.ui.IPluginExtraTabView;
+import com.change_vision.jude.api.inf.ui.ISelectionListener;
+
 public class AllClassesExtraTabView extends JPanel implements IPluginExtraTabView, ProjectEventListener {
 
 	protected AllClassesTableView allClassesTableView;

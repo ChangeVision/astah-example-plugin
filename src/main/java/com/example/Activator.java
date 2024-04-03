@@ -10,7 +10,7 @@ import com.change_vision.jude.api.inf.ui.IMessageDialogHandlerFactory;
 
 public class Activator implements BundleActivator {
 	private static IMessageDialogHandler messageHandler;
-	private ServiceReference reference;
+	private ServiceReference<?> reference;
 	
 	public void start(BundleContext context) {
 		initializeMessageDialogHandler(context);

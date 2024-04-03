@@ -16,13 +16,13 @@ import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 
+import com.change_vision.jude.api.inf.AstahAPI;
 import com.change_vision.jude.api.inf.exception.ProjectNotFoundException;
 import com.change_vision.jude.api.inf.model.IClass;
 import com.change_vision.jude.api.inf.model.IModel;
 import com.change_vision.jude.api.inf.model.INamedElement;
 import com.change_vision.jude.api.inf.model.IPackage;
 import com.change_vision.jude.api.inf.project.ProjectAccessor;
-import com.change_vision.jude.api.inf.project.ProjectAccessorFactory;
 
 public class AllClassesTableView extends JTable {
 	
@@ -55,9 +55,9 @@ public class AllClassesTableView extends JTable {
 
 	public void updateTable() {
 		try {
-            
-			ProjectAccessor projectAccessor = ProjectAccessorFactory.getProjectAccessor();
-			IModel iCurrentProject = projectAccessor.getCurrentProject();
+            AstahAPI api = AstahAPI.getAstahAPI();
+			ProjectAccessor projectAccessor = api.getProjectAccessor();
+			IModel iCurrentProject = projectAccessor.getProject();
 			List<IClass> classList = new ArrayList<IClass>();
 	    	getAllClasses(iCurrentProject, classList);
 	    	

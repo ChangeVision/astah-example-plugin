@@ -10,21 +10,24 @@ package com.example.actions;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.swing.JOptionPane;
+
+import com.change_vision.jude.api.inf.AstahAPI;
 import com.change_vision.jude.api.inf.exception.ProjectNotFoundException;
 import com.change_vision.jude.api.inf.model.IClass;
 import com.change_vision.jude.api.inf.model.IModel;
 import com.change_vision.jude.api.inf.model.INamedElement;
 import com.change_vision.jude.api.inf.model.IPackage;
 import com.change_vision.jude.api.inf.project.ProjectAccessor;
-import com.change_vision.jude.api.inf.project.ProjectAccessorFactory;
 import com.change_vision.jude.api.inf.ui.IPluginActionDelegate;
 import com.change_vision.jude.api.inf.ui.IWindow;
 
 public class CountClassAction implements IPluginActionDelegate {
     public Object run(IWindow window) throws UnExpectedException {
         try {
-            ProjectAccessor projectAccessor = ProjectAccessorFactory.getProjectAccessor();
+        	AstahAPI api = AstahAPI.getAstahAPI();
+            ProjectAccessor projectAccessor = api.getProjectAccessor();
             IModel iCurrentProject = projectAccessor.getProject();
             List<IClass> classeList = new ArrayList<IClass>();
             getAllClasses(iCurrentProject, classeList);

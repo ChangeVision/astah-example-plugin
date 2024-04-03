@@ -29,22 +29,6 @@
       </releases>
     </pluginRepository>
   </pluginRepositories>
-  <repositories>
-    <repository>
-      <id>java.net</id>
-      <name>java.net Maven Repository</name>
-      <url>http://download.java.net/maven/2</url>
-      <releases>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>uk-central</id>
-      <url>http://uk.maven.org/maven2/</url>
-    </repository>
-  </repositories>
   <reporting>
     <plugins>
       <plugin>
